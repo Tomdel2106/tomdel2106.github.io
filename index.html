@@ -37,6 +37,13 @@
 
       themeSwitcher.classList.toggle('dark-mode');
       body.classList.toggle('dark-mode');
+
+      // Changer l'icône du bouton en fonction du thème
+      if (themeSwitcher.classList.contains('dark-mode')) {
+        themeSwitcher.textContent = '';
+      } else {
+        themeSwitcher.textContent = '☀️';
+      }
     }
   </script>
 </body>
