@@ -22,3 +22,23 @@ function toggleTheme() {
     body.classList.remove('dark-mode');
   }
 }
+function ajouterItem() {
+  const liste = document.getElementById('listeCourses');
+  const nouvelItem = document.getElementById('nouvelItem').value;
+  const quantite = document.getElementById('quantite').value;
+
+  if (nouvelItem !== '') {
+    const li = document.createElement('li');
+    li.textContent = `${quantite} x ${nouvelItem}`;
+
+    // Bouton supprimer
+    const supprimerBtn = document.createElement('button');
+    supprimerBtn.textContent = 'Supprimer';
+    supprimerBtn.onclick = function() {
+      liste.removeChild(li);
+    };
+    li.appendChild(supprimerBtn);
+
+    liste.appendChild(li);
+  }
+}
