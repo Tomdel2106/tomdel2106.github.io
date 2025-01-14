@@ -1,4 +1,11 @@
-body {
-  background-color: white;
-  color: black;
+.light-mode {
+  content: "\f185"; /* Code Unicode pour l'icône soleil (à ajuster selon la police d'icônes utilisée) */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  content: "\f186"; /* Code Unicode pour l'icône lune */
+  font-size: 24px;
+  cursor: pointer;
 }
