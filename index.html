@@ -16,7 +16,7 @@
   <input type="number" id="quantite" placeholder="Quantité">
   <button onclick="ajouterItem()">Ajouter</button>
 
-  <span id="theme-switcher" class="light-mode" style="position: absolute; top: 10px; right: 10px;">☀️</span>
+  <span id="theme-switcher" class="light-mode">☀️</span>
 
   <script>
     function ajouterItem() {
@@ -27,14 +27,6 @@
       if (nouvelItem !== '') {
         const li = document.createElement('li');
         li.textContent = `${quantite} x ${nouvelItem}`;
-
-        const supprimerBtn = document.createElement('button');
-        supprimerBtn.textContent = 'Supprimer';
-        supprimerBtn.onclick = function() {
-          liste.removeChild(li);
-        };
-
-        li.appendChild(supprimerBtn);
         liste.appendChild(li);
       }
     }
@@ -44,12 +36,7 @@
       const body = document.body;
 
       themeSwitcher.classList.toggle('dark-mode');
-
-      if (themeSwitcher.classList.contains('dark-mode')) {
-        body.classList.add('dark-mode');
-      } else {
-        body.classList.remove('dark-mode');
-      }
+      body.classList.toggle('dark-mode');
     }
   </script>
 </body>
