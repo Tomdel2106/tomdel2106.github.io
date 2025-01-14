@@ -1,7 +1,6 @@
-/* style.css */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Couleur de fond par défaut (mode clair) */
+  background-color: #f0f0f0;
   color: #333;
 }
 
@@ -10,11 +9,22 @@ body {
   color: #fff;
 }
 
+#listeCourses {
+  list-style: none;
+  padding: 0;
+}
+
+#listeCourses li {
+  margin: 5px;
+  padding: 10px;
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
 #theme-switcher {
   font-size: 24px;
   cursor: pointer;
-}
-
-.dark-mode .theme-switcher {
-  content: "\f186"; /* Code Unicode de la lune */
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
