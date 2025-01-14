@@ -3,7 +3,6 @@
 <head>
   <title>Mon site web</title>
   <link rel="stylesheet" href="style.css">
-  <link id="theme" rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Bienvenue sur le site de la famille !</h1>
@@ -17,27 +16,19 @@
   <input type="number" id="quantite" placeholder="Quantité">
   <button onclick="ajouterItem()">Ajouter</button>
 
-  <button onclick="toggleTheme()">Changer de thème</button>
+  <span id="theme-switcher" class="light-mode" style="position: absolute; top: 10px; right: 10px;">☀️</span>
 
   <script>
     function toggleTheme() {
-      const theme = document.getElementById('theme');
-      if (theme.getAttribute('href') == 'style.css') {
-        theme.href = 'dark.css';
+      const themeSwitcher = document.getElementById('theme-switcher');
+      const body = document.body;
+
+      themeSwitcher.classList.toggle('dark-mode');
+
+      if (themeSwitcher.classList.contains('dark-mode')) {
+        body.classList.add('dark-mode');
       } else {
-        theme.href = 'style.css';
-      }
-    }
-
-    function ajouterItem() {
-      const liste = document.getElementById('listeCourses');
-      const nouvelItem = document.getElementById('nouvelItem').value;
-      const quantite = document.getElementById('quantite').value;
-
-      if (nouvelItem !== '') {
-        const li = document.createElement('li');
-        li.textContent = `${quantite} x ${nouvelItem}`;
-        liste.appendChild(li);
+        body.classList.remove('dark-mode');
       }
     }
   </script>
