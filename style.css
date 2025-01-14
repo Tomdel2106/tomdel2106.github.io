@@ -1,27 +1,20 @@
-.light-mode {
-  content: "\f185"; /* Code Unicode pour l'icône soleil (à ajuster selon la police d'icônes utilisée) */
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.dark-mode {
-  content: "\f186"; /* Code Unicode pour l'icône lune */
-  font-size: 24px;
-  cursor: pointer;
-}
-
 /* style.css */
-
-/* Styles par défaut (mode clair) */
 body {
-  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Couleur de fond par défaut (mode clair) */
   color: #333;
 }
 
-/* Styles pour le mode sombre */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #222;
-    color: #fff;
-  }
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+#theme-switcher {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dark-mode .theme-switcher {
+  content: "\f186"; /* Code Unicode de la lune */
 }
