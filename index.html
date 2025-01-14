@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Site Famille</title>
+  <title>Site de la famille</title>
+  <link rel="stylesheet" href="style.css">
+  <link id="theme" rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue sur le site de la famille!</h1>
+  <button onclick="toggleTheme()">Changer de thème</button>
+  <script>
+    function toggleTheme() {
+      let theme = document.getElementById('theme');
+      if (theme.getAttribute('href') == 'style.css') {
+        theme.href = 'dark.css';
+      } else {
+        theme.href = 'style.css';
+      }
+    }
+  </script>
 </body>
 </html>
