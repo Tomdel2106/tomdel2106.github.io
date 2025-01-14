@@ -7,10 +7,18 @@ function ajouterItem() {
     const li = document.createElement('li');
     li.textContent = `${quantite} x ${nouvelItem}`;
     liste.appendChild(li);
+  }
+}
 
-    // Ajouter un bouton "Supprimer" (facultatif)
-    const supprimerBtn = document.createElement('button');
-    supprimerBtn.textContent = 'Supprimer';
-    li.appendChild(supprimerBtn);
+function toggleTheme() {
+  const themeSwitcher = document.getElementById('theme-switcher');
+  const body = document.body;
+
+  themeSwitcher.classList.toggle('dark-mode');
+
+  if (themeSwitcher.classList.contains('dark-mode')) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
   }
 }
