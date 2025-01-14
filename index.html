@@ -33,14 +33,20 @@
     }
   </script>
 </body>
-</html>
-<ul id="listeCourses">
-</ul>
-
+<html>
 <script>
   // ... reste du code JavaScript ...
+
+  function ajouterItem() {
+    // ... code existant ...
+    const supprimerBtn = document.createElement('button');
+    supprimerBtn.textContent = 'Supprimer';
+    supprimerBtn.onclick = function() {
+      liste.removeChild(li);
+    };
+    li.appendChild(supprimerBtn);
+    // ...
+  }
 </script>
 </body>
 </html>
-
-
