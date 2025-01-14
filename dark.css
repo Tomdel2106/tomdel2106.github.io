@@ -1,0 +1,22 @@
+/* Styles pour le mode sombre */
+body {
+  background-color: #222; /* Fond gris foncé */
+  color: #fff; /* Texte blanc */
+}
+
+/* Autres éléments à personnaliser */
+h1, h2, h3 {
+  color: #ccc; /* Couleur plus claire pour les titres */
+}
+
+a {
+  color: #007bff; /* Bleu clair pour les liens */
+}
+
+/* Liste de courses */
+#listeCourses {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+/* Et ainsi de suite... */
