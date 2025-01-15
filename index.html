@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Bonjour, [Ton prénom] !</h1>
+    <h1 id="greeting">Bonjour, </h1>
     <div class="buttons-container">
       <a href="#" class="button">
         <img src="images/icon-agenda.png" alt="Agenda">
@@ -21,15 +21,13 @@
         <span>Courses</span>
       </a>
     </div>
-    <div class="navigation">
-      <a href="#" class="button-nav">
-        <img src="images/icon-home.png" alt="Accueil">
-        <span>Accueil</span>
-      </a>
-      <a href="#" class="button-nav">
-        <span>Profil</span>
-      </a>
-    </div>
+    <form id="nameForm">
+      <label for="name">Quel est ton prénom ?</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Valider</button>
+    </form>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
