@@ -22,6 +22,10 @@ function addItem() {
     alert('Veuillez remplir les champs "Élément" et "Catégorie".');
   }
 }
+// ... (le reste de ton code JavaScript) ...
+
+document.getElementById('search').addEventListener('input', searchItems);
+
 function searchItems() {
     const searchInput = document.getElementById('search').value.toLowerCase();
     const shoppingListItems = document.getElementById('shoppingList').getElementsByTagName('li');
