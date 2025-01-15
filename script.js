@@ -1,7 +1,9 @@
-// Gestion du changement de thème
 const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+const body = document.body;
 
-// Gestion de la liste de courses, de l'agenda, etc. (à compléter)
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Changer l'icône du bouton en fonction du mode
+    themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌒';
+});
