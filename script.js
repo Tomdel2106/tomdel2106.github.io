@@ -5,5 +5,5 @@ themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 
     // Changer l'icône du bouton en fonction du mode
-    themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌒';
+    themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '';
 });
