@@ -23,3 +23,9 @@ function addItem() {
     alert('Veuillez remplir les champs "Élément" et "Catégorie".');
   }
 }
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+});
