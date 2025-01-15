@@ -1,7 +1,9 @@
-body {
-  font-family: Arial, sans-serif;
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
 }
-#theme-toggle {
-  /* Styles pour le bouton de changement de thème */
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
 }
-/* Autres styles */
