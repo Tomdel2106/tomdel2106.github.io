@@ -7,3 +7,14 @@ body.light-mode {
   background-color: #fff;
   color: #000;
 }
+.container {
+    display: flex;
+}
+
+.form-container {
+    flex: 1;
+}
+
+.list-container {
+    flex: 1;
+}
