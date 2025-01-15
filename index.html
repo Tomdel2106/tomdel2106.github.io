@@ -2,26 +2,25 @@
 <html>
 <head>
   <title>Ma liste de courses</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <input type="text" id="item" placeholder="Ajouter un élément">
-  <input type="text" id="category" placeholder="Catégorie">
-  <input type="number" id="quantity" placeholder="Quantité">
-  <button onclick="addItem()">Ajouter</button>
-
-  <ul id="shoppingList"></ul>
-
-  <script src="script.js"></script>
-  <button id="theme-toggle">Changer de thème</button>
-
-
   <div class="container">
-    <div class="form-container">
-        </div>
-    <div class="list-container">
-        <ul id="shoppingList"></ul>
-    </div>
-</div>
+      <div class="form-container">
+          <input type="text" id="item" placeholder="Ajouter un élément">
+          <select id="category">
+            <option value="alimentation">Alimentation</option>
+            <option value="cosmetique">Cosmétique</option>
+            <option value="autre">Autre</option>
+            <option value="lavage">Produit de lavage</option>
+          </select>
+          <input type="number" id="quantity" placeholder="Quantité">
+          <button onclick="addItem()">Ajouter</button>
+      </div>
+      <div class="list-container">
+          <ul id="shoppingList"></ul>
+      </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
-
