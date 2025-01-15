@@ -1,8 +1,14 @@
-// Afficher un message dans la console du navigateur
-console.log("Hello, world!");
+// Sélectionner le formulaire et le paragraphe où on veut afficher le message
+const form = document.getElementById('form-prenom');
+const message = document.querySelector('h1'); // Adapte le sélecteur si ton élément h1 n'a pas d'ID
 
-// Changer la couleur d'un élément quand on passe la souris dessus
-let bouton = document.getElementById("monBouton");
-bouton.addEventListener("mouseover", function() {
-  bouton.style.backgroundColor = "blue";
+// Écouter l'événement de soumission du formulaire
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Empêche le rechargement de la page
+
+  // Récupérer la valeur saisie dans le champ
+  const prenom = document.getElementById('prenom').value;
+
+  // Mettre à jour le message avec le prénom saisi
+  message.textContent = `Bonjour, ${prenom} !`;
 });
