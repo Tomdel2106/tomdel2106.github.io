@@ -22,3 +22,16 @@ function addItem() {
     alert('Veuillez remplir les champs "Élément" et "Catégorie".');
   }
 }
+function searchItems() {
+    const searchInput = document.getElementById('search').value.toLowerCase();
+    const shoppingListItems = document.getElementById('shoppingList').getElementsByTagName('li');
+
+    for (let i = 0; i < shoppingListItems.length; i++) {
+        const itemText = shoppingListItems[i].textContent.toLowerCase();
+        if (itemText.includes(searchInput)) {
+            shoppingListItems[i].style.display = 'block';
+        } else {
+            shoppingListItems[i].style.display = 'none';
+        }
+    }
+}
