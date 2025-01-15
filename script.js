@@ -32,10 +32,22 @@ function searchItems() {
 
     for (let i = 0; i < shoppingListItems.length; i++) {
         const itemText = shoppingListItems[i].textContent.toLowerCase();
+        const itemElement = shoppingListItems[i];
+
+        // Supprimer toute classe "highlight" existante
+        itemElement.classList.remove('highlight');
+
         if (itemText.includes(searchInput)) {
-            shoppingListItems[i].style.display = 'block';
+            const index = itemText.indexOf(searchInput);
+            const textNode = itemElement.childNodes[0];
+            const splitText = textNode.splitText(index);
+            const highlightSpan = document.createElement('span');
+            highlightSpan.className = 'highlight';
+            highlightSpan.appendChild(splitText);
+            itemElement.insertBefore(highlightSpan, splitText.nextSibling);
+            itemElement.style.display = 'block';
         } else {
-            shoppingListItems[i].style.display = 'none';
+            itemElement.style.display = 'none';
         }
     }
 }
