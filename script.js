@@ -17,15 +17,8 @@ function addItem() {
 
     // Réinitialiser les champs
     document.getElementById('item').value = '';
-    document.getElementById('category').value = '';
     document.getElementById('quantity').value = '';
   } else {
     alert('Veuillez remplir les champs "Élément" et "Catégorie".');
   }
 }
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-});
